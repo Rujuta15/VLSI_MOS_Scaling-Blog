@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560">
+<rect width="1200" height="560" rx="28" fill="#f7f9fc"/>
+<text x="600" y="55" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#10233f">From MOS Scaling to Everyday Electronics</text>
+<text x="600" y="88" text-anchor="middle" font-family="Arial" font-size="18" fill="#5c6b80">Smaller, efficient CMOS devices become building blocks for connected systems</text>
+
+<g transform="translate(60,145)">
+  <rect width="200" height="260" rx="22" fill="#fff" stroke="#dce3ee" stroke-width="2"/>
+  <rect x="60" y="55" width="80" height="80" rx="12" fill="#eaf9f8" stroke="#12a8a2" stroke-width="5"/>
+  <text x="100" y="105" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="#087b79">MOS</text>
+  <text x="100" y="175" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#10233f">Transistor</text>
+  <text x="100" y="210" text-anchor="middle" font-family="Arial" font-size="17" fill="#5c6b80">Switching + logic</text>
+</g>
+
+<g transform="translate(330,145)">
+  <rect width="200" height="260" rx="22" fill="#fff" stroke="#dce3ee" stroke-width="2"/>
+  <rect x="45" y="45" width="110" height="95" rx="12" fill="#eef3ff" stroke="#6555d9" stroke-width="4"/>
+  <text x="100" y="102" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#6555d9">CMOS</text>
+  <text x="100" y="175" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#10233f">VLSI chip</text>
+  <text x="100" y="210" text-anchor="middle" font-family="Arial" font-size="17" fill="#5c6b80">CPU • memory • control</text>
+</g>
+
+<g transform="translate(600,145)">
+  <rect width="200" height="260" rx="22" fill="#fff" stroke="#dce3ee" stroke-width="2"/>
+  <circle cx="100" cy="92" r="52" fill="#fff7ee" stroke="#f39b3d" stroke-width="5"/>
+  <path d="M75 95 h50 M100 70 v50" stroke="#f39b3d" stroke-width="8"/>
+  <text x="100" y="175" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#10233f">IoT / Medical</text>
+  <text x="100" y="210" text-anchor="middle" font-family="Arial" font-size="17" fill="#5c6b80">Sensors • wearables</text>
+</g>
+
+<g transform="translate(870,145)">
+  <rect width="270" height="260" rx="22" fill="#fff" stroke="#dce3ee" stroke-width="2"/>
+  <rect x="75" y="45" width="120" height="82" rx="12" fill="#071d38"/>
+  <circle cx="135" cy="86" r="23" fill="none" stroke="#6ce8e0" stroke-width="4"/>
+  <text x="135" y="175" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#10233f">Connected systems</text>
+  <text x="135" y="210" text-anchor="middle" font-family="Arial" font-size="17" fill="#5c6b80">Smart devices • industry</text>
+</g>
+
+<g stroke="#12a8a2" stroke-width="6" fill="none">
+ <path d="M265 275 H320"/><path d="M535 275 H590"/><path d="M805 275 H860"/>
+</g>
+</svg>

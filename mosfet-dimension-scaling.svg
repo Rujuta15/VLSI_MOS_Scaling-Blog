@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620">
+<rect width="1200" height="620" rx="28" fill="#f7f9fc"/>
+<text x="600" y="58" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#10233f">MOSFET Dimension Scaling</text>
+<text x="600" y="92" text-anchor="middle" font-family="Arial" font-size="18" fill="#5c6b80">Reducing device dimensions increases integration density</text>
+
+<g transform="translate(80,145)">
+  <text x="190" y="0" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="#123f69">Before scaling</text>
+  <rect x="75" y="65" width="230" height="260" rx="18" fill="#eaf1f8" stroke="#123f69" stroke-width="3"/>
+  <rect x="125" y="115" width="130" height="150" rx="10" fill="#fff" stroke="#12a8a2" stroke-width="5"/>
+  <text x="190" y="195" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#10233f">MOSFET</text>
+  <line x1="75" y1="355" x2="305" y2="355" stroke="#6555d9" stroke-width="4"/>
+  <text x="190" y="390" text-anchor="middle" font-family="Arial" font-size="20" fill="#394b63">L, W, tₒₓ</text>
+</g>
+
+<g transform="translate(500,145)">
+  <text x="190" y="0" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="#087b79">Scaled device</text>
+  <rect x="125" y="105" width="130" height="150" rx="10" fill="#fff" stroke="#12a8a2" stroke-width="5"/>
+  <text x="190" y="185" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#10233f">MOSFET</text>
+  <line x1="125" y1="285" x2="255" y2="285" stroke="#6555d9" stroke-width="4"/>
+  <text x="190" y="320" text-anchor="middle" font-family="Arial" font-size="20" fill="#394b63">L/k, W/k, tₒₓ/k</text>
+  <text x="190" y="385" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#087b79">Smaller footprint</text>
+</g>
+
+<g transform="translate(900,165)">
+  <text x="0" y="0" font-family="Arial" font-size="24" font-weight="700" fill="#10233f">Result</text>
+  <text x="0" y="55" font-family="Arial" font-size="21" fill="#394b63">• More transistors / chip</text>
+  <text x="0" y="100" font-family="Arial" font-size="21" fill="#394b63">• Shorter signal paths</text>
+  <text x="0" y="145" font-family="Arial" font-size="21" fill="#394b63">• Potentially higher speed</text>
+  <text x="0" y="190" font-family="Arial" font-size="21" fill="#394b63">• Lower energy when voltage</text>
+  <text x="20" y="220" font-family="Arial" font-size="21" fill="#394b63">  scales appropriately</text>
+</g>
+<path d="M385 300 H485" stroke="#6555d9" stroke-width="7" marker-end="url(#a)"/>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6555d9"/></marker></defs>
+</svg>

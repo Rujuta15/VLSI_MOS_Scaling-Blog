@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620">
+<rect width="1200" height="620" rx="28" fill="#f7f9fc"/>
+<text x="600" y="55" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#10233f">Electric Field: The Key Difference</text>
+<text x="600" y="88" text-anchor="middle" font-family="Arial" font-size="18" fill="#5c6b80">E ≈ V/L — changing voltage and channel length changes field stress</text>
+
+<g transform="translate(95,135)">
+  <rect x="0" y="0" width="470" height="385" rx="24" fill="#fff" stroke="#dce3ee" stroke-width="2"/>
+  <text x="235" y="45" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="#087b79">Constant-Field Scaling</text>
+  <text x="235" y="80" text-anchor="middle" font-family="Arial" font-size="19" fill="#394b63">V → V/k &nbsp;&nbsp; L → L/k</text>
+  <line x1="90" y1="170" x2="380" y2="170" stroke="#123f69" stroke-width="12"/>
+  <text x="235" y="145" text-anchor="middle" font-family="Arial" font-size="18" fill="#394b63">Shorter channel</text>
+  <g stroke="#12a8a2" stroke-width="4">
+    <line x1="135" y1="205" x2="135" y2="290"/><line x1="185" y1="205" x2="185" y2="290"/>
+    <line x1="235" y1="205" x2="235" y2="290"/><line x1="285" y1="205" x2="285" y2="290"/>
+    <line x1="335" y1="205" x2="335" y2="290"/>
+  </g>
+  <text x="235" y="335" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#087b79">Electric field ≈ constant</text>
+</g>
+
+<g transform="translate(635,135)">
+  <rect x="0" y="0" width="470" height="385" rx="24" fill="#fff" stroke="#dce3ee" stroke-width="2"/>
+  <text x="235" y="45" text-anchor="middle" font-family="Arial" font-size="25" font-weight="700" fill="#6555d9">Constant-Voltage Scaling</text>
+  <text x="235" y="80" text-anchor="middle" font-family="Arial" font-size="19" fill="#394b63">V → V &nbsp;&nbsp; L → L/k</text>
+  <line x1="90" y1="170" x2="380" y2="170" stroke="#123f69" stroke-width="12"/>
+  <text x="235" y="145" text-anchor="middle" font-family="Arial" font-size="18" fill="#394b63">Shorter channel, same voltage</text>
+  <g stroke="#6555d9" stroke-width="7">
+    <line x1="135" y1="205" x2="135" y2="290"/><line x1="185" y1="205" x2="185" y2="290"/>
+    <line x1="235" y1="205" x2="235" y2="290"/><line x1="285" y1="205" x2="285" y2="290"/>
+    <line x1="335" y1="205" x2="335" y2="290"/>
+  </g>
+  <text x="235" y="335" text-anchor="middle" font-family="Arial" font-size="21" font-weight="700" fill="#6555d9">Electric field ↑</text>
+</g>
+</svg>

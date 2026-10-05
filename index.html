@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Types of Scaling in MOS Technology | VLSI Blog</title>
+  <meta name="description" content="An original 500–800 word VLSI blog explaining constant-field and constant-voltage scaling, real-world applications, SDG 9, challenges and future scope.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-dot"></span> VLSI NOTES</div>
+  <nav>
+    <a href="#blog">Blog</a>
+    <a href="#vlsi">VLSI Module</a>
+    <a href="#sdg">SDG 9</a>
+    <a href="#references">References</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">VLSI • MOS TECHNOLOGY • SCALING</p>
+      <h1>Types of Scaling in MOS Technology</h1>
+      <p class="hero-sub">Constant-Field and Constant-Voltage Scaling</p>
+      <p class="intro">How shrinking MOSFETs changed the way we build faster, denser and more energy-efficient electronic systems—and why electric-field control still matters.</p>
+      <a class="cta" href="#blog">Start reading <span>↓</span></a>
+    </div>
+    <div class="hero-card">
+      <div class="chip-icon"><div class="chip-core"></div><i></i><i></i><i></i><i></i></div>
+      <div><strong>Core idea</strong><p>Scale the transistor dimensions, manage voltage, and control the electric field.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="article" id="blog">
+  <div class="section-label">ORIGINAL BLOG • VLSI FUNDAMENTALS</div>
+  <h2>Why MOS scaling matters</h2>
+  <p>Modern digital electronics depend on billions of MOSFETs packed into a small silicon chip. Scaling means reducing transistor dimensions so that more devices can fit into the same area and signals can switch with lower delay. The important question is not only <i>how small</i> a transistor becomes, but also <i>how its voltages and electric fields change</i>. Classical VLSI scaling theory gives two useful models: constant-field scaling and constant-voltage scaling.</p>
+
+  <figure class="featured">
+    <img src="assets/mos-scaling-infographic.png" alt="Original infographic comparing constant-field and constant-voltage MOS scaling">
+    <figcaption><b>Figure 1.</b> Original infographic created specifically for this blog. It compares device dimensions, voltage and electric-field behavior in the two scaling approaches.</figcaption>
+  </figure>
+
+  <section class="visual-section">
+    <div class="section-label">VISUAL GUIDE • DEVICE DIMENSIONS</div>
+    <h2>What actually changes when a MOSFET is scaled?</h2>
+    <p>The physical dimensions of the transistor are reduced together with the electrical quantities required by the chosen scaling model. The diagram below connects the abstract scaling factor <b>k</b> to the physical device.</p>
+    <figure class="figure-card">
+      <img src="assets/mosfet-dimension-scaling.svg" alt="Diagram showing MOSFET dimensions before and after scaling">
+      <figcaption><b>Figure 2.</b> Original illustration showing how channel length, width and oxide thickness are reduced during idealized MOS scaling.</figcaption>
+    </figure>
+  </section>
+
+  <h2>Constant-field scaling: shrinking without increasing the field</h2>
+  <p>In constant-field scaling, if the linear dimensions of a MOSFET are reduced by a factor <b>k</b>, important voltages are also reduced by approximately <b>k</b>. Channel length L, width W and oxide thickness are reduced, while V<sub>DD</sub> and other voltage quantities scale down. The simplified electric-field relation explains the idea:</p>
+  <div class="formula">E ≈ V/L &nbsp; → &nbsp; (V/k)/(L/k) = V/L</div>
+  <p>Because both voltage and length are reduced together, the electric field remains approximately constant. This approach is closely associated with Dennard scaling, which provided a powerful roadmap for improving transistor density, switching speed and power behavior. [1][2]</p>
+
+  <div class="cards three">
+    <article><span class="num">01</span><h3>Dimensions ↓</h3><p>L, W and oxide thickness are reduced by the scaling factor.</p></article>
+    <article><span class="num">02</span><h3>Voltage ↓</h3><p>V<sub>DD</sub> is reduced along with the physical dimensions.</p></article>
+    <article><span class="num">03</span><h3>Field ≈ constant</h3><p>The ratio V/L stays approximately unchanged.</p></article>
+  </div>
+
+  <h2>Constant-voltage scaling: smaller device, same voltage</h2>
+  <p>In constant-voltage scaling, device dimensions are reduced but the supply voltage is kept approximately unchanged. This can occur when voltage cannot be reduced proportionally or when a circuit must remain compatible with an existing voltage level. Now:</p>
+  <div class="formula">E ≈ V/L &nbsp; → &nbsp; V/(L/k) = kV/L</div>
+  <p>The shorter channel produces a higher electric field. That can increase electrical stress and reliability problems. Therefore, constant-voltage scaling is useful as a comparison model, but it is less favorable than ideal constant-field scaling when field stress and power are considered.</p>
+
+  <figure class="figure-card wide-visual">
+    <img src="assets/electric-field-comparison.svg" alt="Visual comparison of electric field under constant-field and constant-voltage scaling">
+    <figcaption><b>Figure 3.</b> Original illustration comparing the electric-field outcome of the two scaling approaches.</figcaption>
+  </figure>
+
+  <section id="vlsi" class="module-box">
+    <div class="section-label">VLSI MODULE CONNECTION</div>
+    <h2>Where this fits in the VLSI syllabus</h2>
+    <p>This topic directly connects <b>MOSFET structure and operation</b> with the VLSI concepts of <b>device scaling, short-channel effects, capacitance, propagation delay, switching power and reliability</b>. Scaling reduces capacitances and physical distances, which can improve speed and integration density. Voltage is especially important because dynamic power follows the familiar relationship:</p>
+    <div class="formula">P<sub>dynamic</sub> ∝ C V² f</div>
+    <p>Thus, reducing voltage can strongly reduce switching energy. However, very aggressive scaling introduces leakage, threshold-voltage limits, variability and short-channel effects. The classical models therefore help students understand why modern VLSI design needs both device miniaturization and careful power-management strategies. [1][2]</p>
+  </section>
+
+  <h2>Real-world applications and societal benefits</h2>
+  <p>MOS scaling is not an isolated semiconductor concept—it is one of the foundations behind everyday computing. Smaller and more efficient transistors enable processors in smartphones, laptops, cloud servers, medical electronics, automobiles, communication equipment and IoT nodes. Low-power CMOS is particularly valuable for sensor systems because energy efficiency and compact integration allow devices to operate for longer periods and fit into small products. [3]</p>
+  <p>For society, this translates into faster mobile devices, more capable medical and wearable electronics, affordable connected sensors, smarter industrial systems and increasingly energy-conscious computing. A recent low-voltage CMOS PLL study, for example, demonstrates how low-power circuit design can support sub-GHz IoT applications. [4]</p>
+
+  <figure class="figure-card wide-visual">
+    <img src="assets/scaling-real-world-applications.svg" alt="Diagram connecting MOS transistors and VLSI chips to IoT, medical and connected systems">
+    <figcaption><b>Figure 4.</b> Original illustration showing how transistor-level scaling supports VLSI chips and real-world electronic systems.</figcaption>
+  </figure>
+
+  <section id="sdg" class="sdg-box">
+    <div class="sdg-number">9</div>
+    <div>
+      <div class="section-label">SUSTAINABLE DEVELOPMENT GOAL</div>
+      <h2>SDG 9 — Industry, Innovation and Infrastructure</h2>
+      <p>MO​S scaling aligns strongly with <b>SDG 9</b>, which calls for resilient infrastructure, sustainable industrialization and innovation. [5] Better transistor scaling supports semiconductor innovation and more energy-efficient digital infrastructure. Efficient chips can reduce energy use per computation, while compact electronics can expand the capabilities of communication, sensing and industrial systems.</p>
+      <p>The connection is not that scaling alone achieves SDG 9; rather, it provides a technological foundation for affordable, efficient and innovative electronic infrastructure. Continued semiconductor R&amp;D also supports SDG 9.5, which emphasizes strengthening technological capabilities and research. [5]</p>
+    </div>
+  </section>
+
+  <h2>Challenges and future scope</h2>
+  <p>The classical scaling rules cannot continue indefinitely. At very small dimensions, short-channel effects, leakage current, variability, heat removal and reliability become increasingly difficult. Reducing voltage also becomes harder because noise margins and transistor threshold voltages impose practical limits. The semiconductor industry therefore needs new device structures, materials, advanced transistor architectures and better design techniques rather than simply shrinking every dimension by the same factor.</p>
+  <p>Future VLSI systems will increasingly combine advanced transistor structures with low-power design, specialized accelerators and edge computing. In my view, the most important lesson from MOS scaling is that <b>miniaturization is only useful when it is accompanied by intelligent control of power, electric field and reliability</b>. The goal is no longer simply to put more transistors on a chip; it is to make those transistors useful, efficient and sustainable.</p>
+
+  <section class="takeaway">
+    <div class="section-label">FINAL TAKEAWAY</div>
+    <h2>Remember it in one line</h2>
+    <div class="memory-grid">
+      <div><b>Constant-Field</b><span>Dimensions ↓ + Voltage ↓ → Electric field ≈ constant</span></div>
+      <div><b>Constant-Voltage</b><span>Dimensions ↓ + Voltage same → Electric field ↑</span></div>
+    </div>
+  </section>
+
+  <section id="references" class="references">
+    <div class="section-label">AUTHENTIC REFERENCES</div>
+    <h2>References</h2>
+    <ol>
+      <li>R. H. Dennard, F. H. Gaensslen, H.-N. Yu, V. L. Rideout, E. Bassous and A. R. LeBlanc, “Design of Ion-Implanted MOSFETs with Very Small Physical Dimensions,” <i>IEEE Journal of Solid-State Circuits</i>, vol. 9, no. 5, pp. 256–268, 1974. [1]</li>
+      <li>IEEE Solid-State Circuits Society, “A 30 Year Retrospective on Dennard's MOSFET Scaling Paper,” <i>IEEE Solid-State Circuits Society Newsletter</i>, vol. 12, no. 1, 2007. DOI: 10.1109/N-SSC.2007.4785534. [2]</li>
+      <li>M. C. Smayling, “VLSI CMOS technology for low power sensor applications,” <i>Solid State Ionics</i>, vol. 34, issues 1–2, pp. 121–125, 1989. DOI: 10.1016/0167-2738(89)90441-4. [3]</li>
+      <li>J.-C. Liu and R.-C. Ai, “A low-voltage and low-power PLL for Sub-GHz IoT applications,” <i>Integration</i>, vol. 103, article 102424, 2025. DOI: 10.1016/j.vlsi.2025.102424. [4]</li>
+      <li>United Nations, “Goal 9: Industry, Innovation and Infrastructure,” Sustainable Development Goals. [5]</li>
+    </ol>
+    <p class="reference-note"><b>Originality note:</b> The article text was written specifically for this blog and paraphrases concepts rather than copying source passages. Figures 1–4 are original visuals prepared specifically for this website; no external image was copied.</p>
+  </section>
+</section>
+</main>
+
+<footer>
+  <div><b>MOS Scaling • VLSI Educational Blog</b><br><span>Constant-Field &amp; Constant-Voltage Scaling</span></div>
+  <div>Original student learning resource • HTML + CSS</div>
+</footer>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const el = document.querySelector(a.getAttribute('href'));
+    if (el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+  });
+});
+</script>
+</body>
+</html>
